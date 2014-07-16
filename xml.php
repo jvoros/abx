@@ -2,7 +2,7 @@
 
 header("Content-type: text/xml"); 
 require_once('lib/rb.php');
-R::setup('sqlite:lib/abx-db'); //connect redbean to the database
+R::setup('sqlite:admin/abx-db'); //connect redbean to the database
 $organs = R::findAll('organ', ' ORDER BY orderid');
 $ver = R::load('version', 1);
 

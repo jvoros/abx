@@ -2,7 +2,7 @@
 // INITIALIZE
 date_default_timezone_set('America/Denver'); //timezone for modified date
 require_once('lib/rb.php'); // Redbean ORM v3.4 for database handling
-R::setup('sqlite:lib/abx-db'); //connect redbean to the database
+R::setup('sqlite:admin/abx-db'); //connect redbean to the database
 
 // get data from database
 $organs = R::findAll('organ', ' ORDER BY orderid');
@@ -14,6 +14,7 @@ $ver = R::load('version', 1);
 // convert to array with antibiogram data and version
 $organs_array = R::exportAll($organs);
 $e['version'] = $ver->version;
+$e['modified'] = $ver->modified;
 $e['ownOrgan'] = $organs_array;
 
 // send back JSON encoded data

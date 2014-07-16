@@ -15,17 +15,21 @@ NOTES:
 // INITIALIZE
 
 date_default_timezone_set('America/Denver'); //timezone for modified date
-require_once('../lib/rb.php'); // Redbean ORM v3.4 for database handling
-R::setup('sqlite:../lib/abx-db'); //connect redbean to the database
+require_once('lib/rb.php'); // Redbean ORM v3.4 for database handling
+R::setup('sqlite:admin/abx-db'); //connect redbean to the database
 
 // get data from database
 $organs = R::findAll('organ', ' ORDER BY orderid');
 R::preload($organs, 'infection, infection.treatment');
+$ver = R::load('version', 1);
 
 ?>
 
 <!DOCTYPE html>
-<!--DYNAMICALLY GENERATED CACHE MANIFEST-->
+<!--DYNAMICALLY GENERATED CACHE MANIFEST
+    be sure to modify manifest to exclude files not needed for mobile, 
+    like /admin
+-->
 <html manifest="manifest.php">
 <head>
   
@@ -162,7 +166,8 @@ R::preload($organs, 'infection, infection.treatment');
 
     <div class="ui-content">
       <h2>Abx:DH</h2>
-      <p><i>version 1.0</i> - July 2014</p>
+        <p>Antibiogram version: <?=$ver->version?></p>
+      <p><i>Software Version 1.0</i> - July 2014</p>
       <p>Developed by: <b>Jeremy Voros, MD</b></p>
       <p>Conceptual assistance by: <b>Dave Bosch, DO</b></p>
       <p>Institutional support from: Jeffery Sankoff, MD, Michelle Haas, MD, Tim Jenkins, MD</p>

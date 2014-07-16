@@ -1,0 +1,717 @@
+{
+    "organs": [
+        {
+            "id": "1",
+            "name": "Abdominal",
+            "orderid": "1",
+            "modified": "20140715",
+            "ownInfection": [
+                {
+                    "id": "1",
+                    "title": "Intra-abdominal Infection",
+                    "subtitle": "Uncomplicated, not healthcare associated",
+                    "organ_id": "1",
+                    "orderid": "1",
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "1",
+                            "location": "Inpatient",
+                            "first": "Ceftriaxone 2g IV + Metronidazole 500mg",
+                            "alt": "Ceftriaxone 2g IV + Metronidazole 500mg",
+                            "notes": "Examples: Appendicitis, cholanigitis, cholecystitis",
+                            "infection_id": "1",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                },
+                {
+                    "id": "2",
+                    "title": "Intra-abdominal Infection",
+                    "subtitle": "Healthcare associated, hemodynamically stable",
+                    "organ_id": "1",
+                    "orderid": "2",
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "2",
+                            "location": "Inpatient",
+                            "first": "Piperacillin-tazobactam 4.5g IV every 8 hours",
+                            "alt": "Severe PCN allergy: Levofloxacin 750mg IV\/PO + metronidazole 500mg IV\/PO",
+                            "notes": "",
+                            "infection_id": "2",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                },
+                {
+                    "id": "3",
+                    "title": "Spontaneous Bacterial Peritonitis",
+                    "subtitle": " ",
+                    "organ_id": "1",
+                    "orderid": "3",
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "3",
+                            "location": "Inpatient",
+                            "first": "Ceftriaxone 2gm IV",
+                            "alt": "Severe PCN allergy: Levofloxacin 750mg",
+                            "notes": " ",
+                            "infection_id": "3",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                },
+                {
+                    "id": "4",
+                    "title": "Upper GI Bleed",
+                    "subtitle": "Prophylaxis in Cirrhosis",
+                    "organ_id": "1",
+                    "orderid": "4",
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "4",
+                            "location": "Inpatient",
+                            "first": "Ceftriaxone 1gm IV",
+                            "alt": "Severe PCN allergy: Levofloxacin 750mg",
+                            "notes": " ",
+                            "infection_id": "4",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                },
+                {
+                    "id": "5",
+                    "title": "Necrotizing Pancreatitis",
+                    "subtitle": " ",
+                    "organ_id": "1",
+                    "orderid": "0",
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "5",
+                            "location": "ICU",
+                            "first": "See recommendations for sepsis and septic shock depending on clinical condition.",
+                            "alt": "Consider surgery (Barnett if possible) and consider GI (Attwell if possible) and ID consult (Haas) for co-management.  All three attendings would be interested in a multidisciplinary approach to management of these patients",
+                            "notes": " ",
+                            "infection_id": "5",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "name": "CNS",
+            "orderid": "2",
+            "modified": null,
+            "ownInfection": [
+                {
+                    "id": "6",
+                    "title": "Bacterial Meningitis",
+                    "subtitle": " ",
+                    "organ_id": "2",
+                    "orderid": null,
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "6",
+                            "location": "Inpatient",
+                            "first": "Ceftriaxone 2g IV + Vancomycin 30mg\/kg (max 2g) + Ampicillin 2g IV (if risk factors for Listeria)",
+                            "alt": "Ceftriaxone 2g IV + Vancomycin 30mg\/kg (max 2g) + Bactrim 5mg\/kg\/IV (if risk for Listeria)",
+                            "notes": "Risk factors for listeria: age >50, pregnancy, immunocompromised; If lymphocytic pleocytosis, consider viral causes and the addition of acyclovir.",
+                            "infection_id": "6",
+                            "orderid": "",
+                            "modified": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "name": "HEENT",
+            "orderid": "3",
+            "modified": null,
+            "ownInfection": [
+                {
+                    "id": "7",
+                    "title": "Dental Infection",
+                    "subtitle": "",
+                    "organ_id": "3",
+                    "orderid": "0",
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "7",
+                            "location": "Outpatient",
+                            "first": "Pen VK 500 mg four times\/day for 7 days",
+                            "alt": "Clindamycin 450 mg TID for 7 days",
+                            "notes": "",
+                            "infection_id": "7",
+                            "orderid": null,
+                            "modified": null
+                        },
+                        {
+                            "id": "8",
+                            "location": "Inpatient",
+                            "first": "Ampicillin\/Sulbactam 3g IV every 6 hours",
+                            "alt": "Clindamycin 600mg IV",
+                            "notes": " ",
+                            "infection_id": "7",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                },
+                {
+                    "id": "8",
+                    "title": "Group A Strep Pharyngitis",
+                    "subtitle": " ",
+                    "organ_id": "3",
+                    "orderid": "1",
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "9",
+                            "location": "Outpatient",
+                            "first": "Pen VK 500 mg BID or 10 days OR Pen G (Bicillin-LA) 1.2 million units IM once",
+                            "alt": "PCN allergic WITH anaphylaxis: Azithromycin 500mg PO QD x 5 days ",
+                            "notes": "PCN allergic, no anaphylaxis: cephalexin 500mg BID x 10 days",
+                            "infection_id": "8",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                },
+                {
+                    "id": "9",
+                    "title": "Viral URI ",
+                    "subtitle": " ",
+                    "organ_id": "3",
+                    "orderid": "2",
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "10",
+                            "location": "Outpatient",
+                            "first": "symptomatic relief ",
+                            "alt": "symptomatic relief",
+                            "notes": "consider influenza in differential diagnosis, see influenza testing and treatment recommendations ",
+                            "infection_id": "9",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                },
+                {
+                    "id": "10",
+                    "title": "Sinusitis ",
+                    "subtitle": "Mild, less than 10 days",
+                    "organ_id": "3",
+                    "orderid": "3",
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "11",
+                            "location": "Outpatient",
+                            "first": "symptomatic relief ",
+                            "alt": "symptomatic relief ",
+                            "notes": "Only if no double worsening. Double worsening: defined as initial clinical improvement followed by clinical worsening",
+                            "infection_id": "10",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                },
+                {
+                    "id": "11",
+                    "title": "Severe Sinusitis",
+                    "subtitle": "More than 10 days, double worsening",
+                    "organ_id": "3",
+                    "orderid": "4",
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "12",
+                            "location": "No Resistance Risk Factors",
+                            "first": "Amoxicillin-clavulanate 875 PO BID for 5 days",
+                            "alt": "Doxycycline 100 mg BID for 5 dats",
+                            "notes": "Double worsening: defined as initial clinical improvement followed by clinical worsening. Risk factors for antibiotic resistance: Age less than 2 or older than 65; daycare exposure; prior antibiotics within the past month; prior hospitalization past 5 days; comorbidities; immunocompromised ",
+                            "infection_id": "11",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                },
+                {
+                    "id": "12",
+                    "title": "Severe Sinusitis",
+                    "subtitle": "More than 10 days, double worsening",
+                    "organ_id": "3",
+                    "orderid": "5",
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "13",
+                            "location": "With Resistance Risk Factors",
+                            "first": "Doxycycline 100 mg BID for 7 days",
+                            "alt": "Levofloxacin 500mg daily for 7 days",
+                            "notes": "see above; if hospitalized, first line is ceftriaxone 2g IV daily; Sudden onset of severe sinusitis in an uncontrolled diabetic should prompt review of risk factors for invasive fungal sinusitis. Consider consulting with ENT or Infectious Disease. ",
+                            "infection_id": "12",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "name": "Genitourinary",
+            "orderid": "4",
+            "modified": null,
+            "ownInfection": [
+                {
+                    "id": "13",
+                    "title": "Cystitis",
+                    "subtitle": "Simple",
+                    "organ_id": "4",
+                    "orderid": null,
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "14",
+                            "location": "Simple",
+                            "first": "Nitrofurantoin 100 mg BID for 5 days",
+                            "alt": "Levofloxacin 250 mg daily for 3 days",
+                            "notes": "No urine culture",
+                            "infection_id": "13",
+                            "orderid": null,
+                            "modified": null
+                        },
+                        {
+                            "id": "15",
+                            "location": "Pregnancy",
+                            "first": "Nitrofurantoin 100 mg BID for 7 days",
+                            "alt": "Cephalexin 250 mg four times\/day for 7 days ",
+                            "notes": "Urine culture monthly; candidate for suppressive therapy if > 2 cultures positive ",
+                            "infection_id": "13",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                },
+                {
+                    "id": "14",
+                    "title": "Pyelonephritis",
+                    "subtitle": "",
+                    "organ_id": "4",
+                    "orderid": null,
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "16",
+                            "location": "Outpatient",
+                            "first": "No Risk Factors for FQ resistance: Levofloxacin 500 mg daily for 7 days",
+                            "alt": "Risk Factors for FQ resistance (see notes): Ceftriaxone 1gram IV\/IM daily vs gentamicin 3-5 mg\/kg IV daily (if pseudomonas risk). Adjust abx based on CandS data ",
+                            "notes": "Risk factors are hospitalization or abx exposure >7d w\/in past year. Get urine culture; if systemic symptoms=blood culture+admit. If enterococcus a concern, call antimicrobial stewardship pager at 303-201-3342 ",
+                            "infection_id": "14",
+                            "orderid": null,
+                            "modified": null
+                        },
+                        {
+                            "id": "17",
+                            "location": "Inpatient (Nonpregnant)",
+                            "first": "Ceftriaxone 2g IV",
+                            "alt": " ",
+                            "notes": "Urine culture",
+                            "infection_id": "14",
+                            "orderid": null,
+                            "modified": null
+                        },
+                        {
+                            "id": "18",
+                            "location": "Inpatient (Pregnant)",
+                            "first": "Ceftriaxone 1 gram IV\/IM (1-2 doses) then cephalexin 500 mg four times\/day for 14 days; discuss with OB ",
+                            "alt": "discuss with OB or call antimicrobial stewardshp pager at 303-201-3342 ",
+                            "notes": "urine culture; d\/w OB follow up and need for suppressive therapy ",
+                            "infection_id": "14",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                },
+                {
+                    "id": "15",
+                    "title": "Cervicitis, Urethritis, Rectal",
+                    "subtitle": " ",
+                    "organ_id": "4",
+                    "orderid": null,
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "19",
+                            "location": "No Penicillin Allergy",
+                            "first": "Ceftriaxone 250mg IM X 1 PLUS Azithromycin 1g PO X 1 ",
+                            "alt": "Cefixime 400mg PO X 1 PLUS doxycycline 100mg PO BID x 7 days ",
+                            "notes": "Elevated MICs to cefixime were noted in 1.8% of specimens referred for resistance testing through the STD clinic from Jan 2010 through August 2012 ",
+                            "infection_id": "15",
+                            "orderid": null,
+                            "modified": null
+                        },
+                        {
+                            "id": "20",
+                            "location": "Penicillin Allergy",
+                            "first": "Azithromycin 2g PO X 1 ",
+                            "alt": " ",
+                            "notes": " ",
+                            "infection_id": "15",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                },
+                {
+                    "id": "16",
+                    "title": "Pelvic Inflammatory Disease",
+                    "subtitle": " ",
+                    "organ_id": "4",
+                    "orderid": null,
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "21",
+                            "location": "Outpatient",
+                            "first": "Ceftriaxone 250 mg IM once with doxycycline 100 mg BID x 14 days PLUS metronidazole 500mg PO BID x 14 days ",
+                            "alt": "severe PCN allergy: call antimicrobial stewardshp pager at 303-201-3342 ",
+                            "notes": " ",
+                            "infection_id": "16",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                },
+                {
+                    "id": "17",
+                    "title": "Complicated UTI",
+                    "subtitle": "Inpatient Regimens",
+                    "organ_id": "4",
+                    "orderid": null,
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "22",
+                            "location": "Community Acquired",
+                            "first": "Ceftriaxone 1gm IV",
+                            "alt": "Aztreonam 2g IV",
+                            "notes": " ",
+                            "infection_id": "17",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "name": "Pulmonary",
+            "orderid": "5",
+            "modified": null,
+            "ownInfection": [
+                {
+                    "id": "18",
+                    "title": "COPD Exacerbation",
+                    "subtitle": "Inpatient and Outpatient",
+                    "organ_id": "5",
+                    "orderid": null,
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "23",
+                            "location": "Outpatient",
+                            "first": "None (if mild exacerbation); for moderate exacerbations first line is Doxycycline 100mg PO BID for 5 days",
+                            "alt": "Azithromycin 500mg X 1 then 250mg daily x 4 days ",
+                            "notes": "Consider CXR ",
+                            "infection_id": "18",
+                            "orderid": null,
+                            "modified": null
+                        },
+                        {
+                            "id": "24",
+                            "location": "Inpatient",
+                            "first": "Azithromycin 500mg IV\/PO",
+                            "alt": " Doxycycline 100mg PO ",
+                            "notes": " ",
+                            "infection_id": "18",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                },
+                {
+                    "id": "19",
+                    "title": "Pneumonia",
+                    "subtitle": "Inpatient and Outpatient",
+                    "organ_id": "5",
+                    "orderid": null,
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "25",
+                            "location": "Outpatient",
+                            "first": "Doxycycline 100 mg BID for 5 days",
+                            "alt": "Azithromycin 500 mg QD for 3 days",
+                            "notes": " ",
+                            "infection_id": "19",
+                            "orderid": null,
+                            "modified": null
+                        },
+                        {
+                            "id": "26",
+                            "location": "Inpatient, Community Acquired",
+                            "first": "Ceftriaxone 1g IV and azithromycin 500mg IV",
+                            "alt": "Severe PCN allergy: Levofloxacin 750mg daily (has activity against M. tuberculosis)",
+                            "notes": " ",
+                            "infection_id": "19",
+                            "orderid": null,
+                            "modified": null
+                        },
+                        {
+                            "id": "27",
+                            "location": "Inpatient, Health Care Associated",
+                            "first": "Vancomycin 20mg\/kg IV (MAX dose 2g) + Cefepime 2g IV",
+                            "alt": "Severe PCN allergy: Vancomycin 30mg\/kg IV + Levofloxacin 750mg IV",
+                            "notes": " ",
+                            "infection_id": "19",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                },
+                {
+                    "id": "20",
+                    "title": "Empyema",
+                    "subtitle": " ",
+                    "organ_id": "5",
+                    "orderid": null,
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "28",
+                            "location": "Inpatient",
+                            "first": "Ampicillin\/Sulbactam 3g IV every 6 hours",
+                            "alt": " Clindamycin 600mg IV",
+                            "notes": " ",
+                            "infection_id": "20",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "name": "Skin and Soft Tissue",
+            "orderid": "6",
+            "modified": null,
+            "ownInfection": [
+                {
+                    "id": "21",
+                    "title": "Abscess",
+                    "subtitle": "",
+                    "organ_id": "6",
+                    "orderid": null,
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "29",
+                            "location": "Without Cellulitis",
+                            "first": "Drainage, no abx indicated unless risk factors present (see comments) ",
+                            "alt": " ",
+                            "notes": "inadequate drainage; diabetes, valvular heart disease, immunosuppressing condition or medication ",
+                            "infection_id": "21",
+                            "orderid": null,
+                            "modified": null
+                        },
+                        {
+                            "id": "30",
+                            "location": "With Cellulitis",
+                            "first": "Drainage + Bactrim DS BID for 5 days",
+                            "alt": "Drainage + Clindamycin 450mg TID for 5 days; 2nd alternate: doxycycline 100mg PO BID for 5 days",
+                            "notes": "IandD with culture; see footnote regarding bactrim under cellulitis with drainage ",
+                            "infection_id": "21",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                },
+                {
+                    "id": "22",
+                    "title": "Bites",
+                    "subtitle": "Dog, Cat, or Human",
+                    "organ_id": "6",
+                    "orderid": null,
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "31",
+                            "location": "Outpatient",
+                            "first": "Augmentin 875 mg BID for 3-5 days (prophylaxis) or 7 days (treatment)",
+                            "alt": "Clindamycin 300-450mg mg TID + Levofloxacin 500mg daily for 7 days",
+                            "notes": "high risk for deep infection in which antibiotic prophylaxis\/treatment would be warranted: obvious cellulitis, deep puncture wound, over bone\/joint, decreased lymphatic supply, immunocompromised, DM ",
+                            "infection_id": "22",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                },
+                {
+                    "id": "23",
+                    "title": "Cellulitis",
+                    "subtitle": "Inpatient and Outpatient",
+                    "organ_id": "6",
+                    "orderid": null,
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "32",
+                            "location": "Outpatient, no Purulence",
+                            "first": "Cephalexin 1g PO TID for 5 days",
+                            "alt": "Doxycycline 100 mg BID x 5 days OR clindamycin 450mg PO TID for 5 days",
+                            "notes": " ",
+                            "infection_id": "23",
+                            "orderid": "0",
+                            "modified": null
+                        },
+                        {
+                            "id": "33",
+                            "location": "Outpatient, with Purulence",
+                            "first": "Bactrim DS 1-2 tabs PO BID for 5 days",
+                            "alt": "Doxycycline 100 mg BID x 5 days OR clindamycin 450mg PO TID x 5 days ",
+                            "notes": "*Caution should be used in patients with reduced renal function or on other medications known to increase potassium levels, life threatening cases of hyperkalemia have been reported ",
+                            "infection_id": "23",
+                            "orderid": "1",
+                            "modified": null
+                        },
+                        {
+                            "id": "34",
+                            "location": "Inpatient, no Purulence",
+                            "first": "Cefazolin 2g IV",
+                            "alt": "Severe PCN allergy: Vancomycin 20mg\/kg IV X 1 (max dose 2g)",
+                            "notes": " ",
+                            "infection_id": "23",
+                            "orderid": "2",
+                            "modified": null
+                        },
+                        {
+                            "id": "35",
+                            "location": "Inpatient, with Purulence",
+                            "first": "Vancomycin 20mg\/kg IV X 1 (max dose 2g)",
+                            "alt": "Bactrim DS BID x 5 days",
+                            "notes": " ",
+                            "infection_id": "23",
+                            "orderid": "3",
+                            "modified": null
+                        }
+                    ]
+                },
+                {
+                    "id": "24",
+                    "title": "Diabetic Foot",
+                    "subtitle": "Inpatient and Outpatient",
+                    "organ_id": "6",
+                    "orderid": null,
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "36",
+                            "location": "Outpatient, no Cellulitis",
+                            "first": "avoid antibiotics unless systemically ill ",
+                            "alt": " ",
+                            "notes": "call podiatry for additional management or book in podiatry ID clinic, most patients would benefit from optimization of wound care and close follow up ",
+                            "infection_id": "24",
+                            "orderid": null,
+                            "modified": null
+                        },
+                        {
+                            "id": "37",
+                            "location": "Outpatient, with Cellulitis",
+                            "first": "Clindamycin 450mg PO TID for 7 days",
+                            "alt": "Bactrim DS 2 tabs PO BID for 7 dyas",
+                            "notes": "*Caution should be used in patients with reduced renal function or on other medications known to increase potassium levels, life threatening cases of hyperkalemia have been reported ",
+                            "infection_id": "24",
+                            "orderid": null,
+                            "modified": null
+                        },
+                        {
+                            "id": "38",
+                            "location": "Inpatient, no Cellulitis",
+                            "first": "avoid antibiotics unless systemically ill, call ortho-ID for additional management",
+                            "alt": " ",
+                            "notes": " ",
+                            "infection_id": "24",
+                            "orderid": null,
+                            "modified": null
+                        },
+                        {
+                            "id": "39",
+                            "location": "Inpatient, with Cellulitis",
+                            "first": "Vancomycin 20mg\/kg IV X 1 (max dose 2g)",
+                            "alt": " ",
+                            "notes": " ",
+                            "infection_id": "24",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "name": "Neutropenia",
+            "orderid": "7",
+            "modified": null,
+            "ownInfection": [
+                {
+                    "id": "25",
+                    "title": "Febrile Neutropenia",
+                    "subtitle": " ",
+                    "organ_id": "7",
+                    "orderid": null,
+                    "modified": null,
+                    "ownTreatment": [
+                        {
+                            "id": "40",
+                            "location": "Inpatient",
+                            "first": "Cefepime 2g IV",
+                            "alt": "Severe PCN allergy: Aztreonam 2g IV Add Vancomycin if line infection suspected",
+                            "notes": " ",
+                            "infection_id": "25",
+                            "orderid": null,
+                            "modified": null
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "version": {
+        "id": "1",
+        "version": "5",
+        "modified": "20140715",
+        "backup_time": "20140715",
+        "backup_version": "5"
+    }
+}

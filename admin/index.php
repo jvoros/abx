@@ -13,18 +13,23 @@ if (!($_SERVER['PHP_AUTH_USER'] == $config['admin_username'] && $_SERVER['PHP_AU
 }
 
 date_default_timezone_set('America/Denver'); //timezone for modified date
+
+// connect to dbase
 require_once('../lib/rb.php');
-R::setup('sqlite:../lib/abx-db'); //connect redbean to the database
+R::setup('sqlite:abx-db'); //connect redbean to the database
 $organs = R::findAll('organ', ' ORDER BY orderid');
+$version = R::load('version', 1);
+
+// generate JSON model
+
 
 // FUNCTIONS
 
-// get JSON
+// get JSON for initial POST request
 if (isset($_POST['getJSON'])) {
-    $version = R::load('version', 1);
-    $modified = date("M d Y",strtotime($version->modified));
-    $organs = json_encode(R::exportAll($organs));
-    $json = '{"version":"'.$version->version.'", "modified":"'.$modified.'", "organs":'.$organs.'}';
+    $j['organs'] = R::exportAll($organs);
+    $j['version'] = $version->export();
+    $json = json_encode($j);
     echo $json;
     return;
 }
@@ -114,6 +119,30 @@ if (isset($_POST['delete'])) {
         break;
     }
 }
+
+// backup
+if (isset($_POST['backup'])) {
+    // update backup versions and dates
+    $version->backup_version = $version->version;
+    $version->backup_time = date("Ymd");
+    $version_id = R::store($version);
+    
+    // generate JSON model
+    $j['organs'] = R::exportAll($organs);
+    $j['version'] = $version->export();
+    $json = json_encode($j, JSON_PRETTY_PRINT);
+    
+    // save file
+    $filename = 'backups/backup_JSON_'.$version->backup_time.'.json';
+    file_put_contents($filename, $json);
+    
+    // return new version and date
+    $data['version'] = $version->backup_version;
+    $data['date'] = $version->backup_time;
+    echo json_encode($data);
+    return;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -149,6 +178,7 @@ if (isset($_POST['delete'])) {
     .txdetail { margin: 0 0 10px 100px;}
     .delete { float: right; }
     .add { clear: left;  }
+    #backup { margin: 2em; }
 
 </style>
 
@@ -166,11 +196,12 @@ if (isset($_POST['delete'])) {
     
     <!-- TEMPLATES -->
     <script id="mainTpl" type="text/template">
-        <h2>Version <span id="version_version_1" class="edit">{{version}}</span></h2>
+        <h2>Version <span id="version_version_1" class="edit">{{#version}}{{version}}{{/version}}</span></h2>
         <div id="organs" class="sort">
             {{>organs}}
         <button id="addOrgan" class="btn btn-primary btn-small add"><i class="icon-plus"></i> Add Organ</button>
         </div>
+        <div id="backup"><a class="btn btn-warning" id="backupButton">Backup</a>{{#version}} Last Backed-up Version: {{backup_version}} on {{backup_time}}{{/version}}</div>
         
     </script>
     
@@ -330,6 +361,15 @@ if (isset($_POST['delete'])) {
             $.post("", {delete: id})
             .done(function(){parent.remove();});
         }
+    });
+    
+    // backup
+    $('#backupButton').on('click', function(e){
+        $.post('', {backup: 'true'}, function(data){
+            console.log(data);
+            var msg = "BACKED UP. Last Backed-up Version: "+data.version+" on "+data.date;
+            $('#backup').html(msg);
+        }, 'json');
     });
 
 </script>
