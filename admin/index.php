@@ -52,7 +52,7 @@ if (isset($_POST['value'])) {
     $value = $_POST['value'];
     list($table, $el, $id) = explode("_", $_POST['id']);
     $newRow = R::load($table, $id);
-    $newRow->$el = htmlspecialchars($value, ENT_QUOTES);
+    $newRow->$el = $value; //htmlspecialchars($value, ENT_QUOTES);
     $newRow->modified = date("Ymd");
     $id = R::store($newRow);
     echo $value;
@@ -249,9 +249,9 @@ if (isset($_POST['backup'])) {
             <h3 class="edit" id="treatment_location_{{id}}">{{location}}</h3>
             <button class="btn btn-danger btn-small delete"><i class="icon-remove"></i></button>
             <div class="details">
-                <div><div class="txtitle" >FIRST LINE:</div><div class="txdetail edit" id="treatment_first_{{id}}">{{first}}</div></div>
-                <div><div class="txtitle" >ALTERNATE:</div><div class="txdetail edit" id="treatment_alt_{{id}}">{{alt}}</div></div>
-                <div><div class="txtitle" >NOTES:</div><div class="txdetail edit" id="treatment_notes_{{id}}">{{notes}}</div></div>
+                <div><div class="txtitle" >FIRST LINE:</div><div class="txdetail edit" id="treatment_first_{{id}}">{{{first}}}</div></div>
+                <div><div class="txtitle" >ALTERNATE:</div><div class="txdetail edit" id="treatment_alt_{{id}}">{{{alt}}}</div></div>
+                <div><div class="txtitle" >NOTES:</div><div class="txdetail edit" id="treatment_notes_{{id}}">{{{notes}}}</div></div>
             </div>
         </div>
         {{/ownTreatment}}
@@ -366,7 +366,6 @@ if (isset($_POST['backup'])) {
     // backup
     $('#backupButton').on('click', function(e){
         $.post('', {backup: 'true'}, function(data){
-            console.log(data);
             var msg = "BACKED UP. Last Backed-up Version: "+data.version+" on "+data.date;
             $('#backup').html(msg);
         }, 'json');
