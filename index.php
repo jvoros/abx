@@ -84,6 +84,7 @@ $ver = R::load('version', 1);
     /*    bottom border on list items and word wrapping in list items*/
     .ui-listview>li { border-bottom: 1px solid white; }
     .ui-listview>li p { font-size: 0.85em; white-space: normal; }
+    .last-mod { text-align:center; color: #16a085; font-size: 0.8em; }
   </style>
 
 </head>
@@ -91,7 +92,7 @@ $ver = R::load('version', 1);
 
   <!--  STARTING PAGE-->
   <div data-role="page" id="home">
-    <div data-role="header">
+    <div data-role="header" data-position="fixed">
       <h1>Organs</h1>
     </div>
     <div class="ui-content">
@@ -105,7 +106,7 @@ $ver = R::load('version', 1);
         <li><a href="#about" data-transition="flip">About</a></li>        
       </ul>
         <br />
-        <p style="text-align:center; color: #16a085;">Updated: <?=date('d M Y', strtotime($ver->modified))?></p>
+        <p class="last-mod">Updated: <?=date('d M Y', strtotime($ver->modified))?></p>
     </div>
   </div>
   
@@ -113,7 +114,7 @@ $ver = R::load('version', 1);
   <!-- ORGAN PAGES, ONE FOR EACH ORGAN, LISTS INFECTIONS -->
   <? foreach($organs as $organ) : ?>
   <div data-role="page" id="organ-<?=$organ->id?>">
-    <div data-role="header">
+    <div data-role="header" data-position="fixed">
       <a data-role="button" href="#home" data-transition="slide" data-direction="reverse">Back</a>
       <h1><?=$organ->name?></h1>
     </div>
@@ -139,7 +140,7 @@ $ver = R::load('version', 1);
   <!-- INFECTION PAGE, ONE FOR EACH INFECTION, LISTS TREATMENTS -->
   <? foreach($organs as $organ) : $infections = $organ->ownInfection; foreach($infections as $infection) : ?>
   <div data-role="page" id="infection-<?=$infection->id?>" class="flurry">
-    <div data-role="header">
+    <div data-role="header" data-position="fixed">
       <a data-role="button" href="#organ-<?=$organ->id?>" data-transition="slide" data-direction="reverse">Back</a>
       <h1><?=$infection->title?></h1>
     </div>
@@ -161,7 +162,7 @@ $ver = R::load('version', 1);
   
   <!--  ABOUT-->
   <div data-role="page" id="about" class="flurry">
-    <div data-role="header">
+    <div data-role="header" data-position="fixed">
       <a data-role="button" href="#home" data-transition="flip">Back</a>
       <h1>About</h1>
     </div>
