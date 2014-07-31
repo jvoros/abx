@@ -167,20 +167,21 @@ $ver = R::load('version', 1);
 
     <div class="ui-content">
       <h2>Abx:DH</h2>
-        <p>Antibiogram version: <?=$ver->version?></p>
+      <p>Recommendation Version: <?=$ver->version?></p>
       <p><i>Software Version 1.0</i> - July 2014</p>
       <p>Developed by: <b>Jeremy Voros, MD</b></p>
       <p>Conceptual assistance by: <b>Dave Bosch, DO</b></p>
+      <p>Painstaking data entry by: <b>Heather Young, MD</b></p>
       <p>Institutional support from: Jeffery Sankoff, MD, Michelle Haas, MD, Tim Jenkins, MD</p>
       <p>Questions? Email: <b><a href="mailto:jeremy.voros@denverem.org">jeremy.voros@denverem.org</a></b></p>
       
       <div data-role="collapsible">
         <h3>Denver Health Legal Disclaimer</h3>
         <p>Antibiotic Stewardship Application - DISCLAIMER - December 31, 2013</p>
-        <p>This Antibiotic Stewardship Application ("Application") has been created by the Denver Health and Hospital Authority ("Denver Health") and is intended for informational purposes only. Although Denver Health attempts to keep this information as accurate as possible, Denver Health makes no guarantees or warranties of any kind, express or implied, with respect to the use of this Application.</p>
+        <p>This Antibiotic Stewardship Application ("Application") has been created for the Denver Health and Hospital Authority ("Denver Health") and is intended for informational purposes only. Although Denver Health attempts to keep this information as accurate as possible, Denver Health makes no guarantees or warranties of any kind, express or implied, with respect to the use of this Application.</p>
         <p>This Application is not intended to be, nor should it be used as a substitute for, the professional medical advice or analysis required when prescribing an antibiotic for a Denver Health patient or any patient outside of Denver Health. Use of this Application is not intended to, nor does it create, a physician-patient or healthcare provider-patient relationship between Denver Health and the user or the user's patient.  Application users assume full responsibility for any actions taken on the basis of the information obtained from use of the Application and agree that Denver Health bears no responsibility for any claim, loss or damage caused by or related to its use.</p>
         <p>Since Denver Health has no legal obligation to update the information provided on this Application, Denver Health cannot ensure that all information reflects the most up-to-date information regarding prescribing antibiotics. Denver Health may make changes or improvements to this Application at any time without notice or announcement.  Application users outside of Denver Health should consult their local facility policies and procedures regarding antibiotic use.</p>  
-        <p>If you have any questions about this disclaimer or any other information contained on this Application, you can contact Denver Health Infectious Disease Department.</p>
+        <p>If you have any questions about this disclaimer or any other information contained in this Application, you can contact Denver Health Infectious Disease Department.</p>
       </div>
       
     </div>
