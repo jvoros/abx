@@ -102,9 +102,10 @@ $ver = R::load('version', 1);
         <? endforeach; ?>
         
         <li data-role="list-divider"></li>
-        <li><a href="#about" data-transition="flip">About</a></li>
-        
+        <li><a href="#about" data-transition="flip">About</a></li>        
       </ul>
+        <br />
+        <p style="text-align:center; color: #16a085;">Updated: <?=date('d M Y', strtotime($ver->modified))?></p>
     </div>
   </div>
   
@@ -167,7 +168,7 @@ $ver = R::load('version', 1);
 
     <div class="ui-content">
       <h2>Abx:DH</h2>
-      <p>Recommendation Version: <?=$ver->version?></p>
+      <p>Last Updated <?=date('d M Y', strtotime($ver->modified))?></p>
       <p><i>Software Version 1.0</i> - July 2014</p>
       <p>Developed by: <b>Jeremy Voros, MD</b></p>
       <p>Conceptual assistance by: <b>Dave Bosch, DO</b></p>

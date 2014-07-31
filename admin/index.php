@@ -47,6 +47,13 @@ if (isset($_POST['reorder'])) {
     return;
 }
 
+// last update utility function
+function lastMod($version) {
+    $version->modified = date("Y-m-d H:i:s");
+    $v_id = R::store($version);
+    return $v_id;
+}
+
 // jeditable update
 if (isset($_POST['value'])) {
     $value = $_POST['value'];
@@ -55,6 +62,7 @@ if (isset($_POST['value'])) {
     $newRow->$el = $value; //htmlspecialchars($value, ENT_QUOTES);
     $newRow->modified = date("Ymd");
     $id = R::store($newRow);
+    lastMod($version);
     echo $value;
     return;
 }
@@ -67,6 +75,7 @@ if (isset($_GET['new'])) {
             $organ = R::dispense('organ');
             $organ->orderid = count(R::findAll('organ'));
             $newid = R::store($organ);
+            lastMod($version);
             echo '{"item":"organ", "id":"'.$newid.'"}';
         break;
         
@@ -76,6 +85,7 @@ if (isset($_GET['new'])) {
             $organ->ownInfection[] = $infection;
             $organid = R::store($organ);
             $newid = R::store($infection);
+            lastMod($version);
             echo '{"item":"infection", "id":"'.$newid.'"}';
         break;
         
@@ -85,6 +95,7 @@ if (isset($_GET['new'])) {
             $infection->ownTreatment[] = $treatment;
             $infectionid = R::store($infection);
             $newid = R::store($treatment);
+            lastMod($version);
             echo '{"item":"treatment", "id":"'.$newid.'"}';
         break;
     }
@@ -104,6 +115,7 @@ if (isset($_POST['delete'])) {
             }
             R::trashAll($infections);
             R::trash($organ);
+            lastMod($version);
         break;
         
         case "infection":
@@ -111,11 +123,13 @@ if (isset($_POST['delete'])) {
             $treatments = $infection->ownTreatment;
             R::trashAll($treatments);
             R::trash($infection);
+            lastMod($version);
         break;
         
         case "treatment":
             $treatment = R::load('treatment', $id);
             R::trash($treatment);
+            lastMod($version);
         break;
     }
 }
