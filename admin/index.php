@@ -124,7 +124,7 @@ if (isset($_POST['delete'])) {
 if (isset($_POST['backup'])) {
     // update backup versions and dates
     $version->backup_version = $version->version;
-    $version->backup_time = date("Ymd");
+    $version->backup_time = date("Y-m-d-H-i");
     $version_id = R::store($version);
     
     // generate JSON model
