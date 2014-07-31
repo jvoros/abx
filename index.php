@@ -147,8 +147,9 @@ $ver = R::load('version', 1);
       <? $treatments = $infection->ownTreatment; foreach($treatments as $treatment) :?>
       <li data-role="list-divider"><?=$treatment->location?></li>
       <li><h3>First Line</h3><p><?=$treatment->first?></p></li>
-      <li><h3>Alternate</h3><p><?=$treatment->alt?></p></li>
-      <li><h3>Notes</h3><p><?=$treatment->notes?></p></li>
+      <? if ($treatment->alt) : ?><li><h3>Alternate</h3><p><?=$treatment->alt?></p></li><? endif; ?>
+      <? if ($treatment->duration) : ?><li><h3>Duration</h3><p><?=$treatment->duration?></p></li><? endif; ?>
+      <? if ($treatment->notes != '' && $treatment->notes != ' ') : ?><li><h3>Notes</h3><p><?=$treatment->notes?></p></li><? endif; ?>
       <? endforeach; ?>
       </ul>
     </div>

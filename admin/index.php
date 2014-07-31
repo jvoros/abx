@@ -251,6 +251,7 @@ if (isset($_POST['backup'])) {
             <div class="details">
                 <div><div class="txtitle" >FIRST LINE:</div><div class="txdetail edit" id="treatment_first_{{id}}">{{{first}}}</div></div>
                 <div><div class="txtitle" >ALTERNATE:</div><div class="txdetail edit" id="treatment_alt_{{id}}">{{{alt}}}</div></div>
+                <div><div class="txtitle" >DURATION:</div><div class="txdetail edit" id="treatment_duration_{{id}}">{{{duration}}}</div></div>
                 <div><div class="txtitle" >NOTES:</div><div class="txdetail edit" id="treatment_notes_{{id}}">{{{notes}}}</div></div>
             </div>
         </div>
